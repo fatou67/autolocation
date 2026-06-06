@@ -10,13 +10,18 @@ import Locations from './pages/Locations'
 import Statistiques from './pages/Statistiques'
 import Calendrier from './pages/Calendrier'
 import Profil from './pages/Profil'
+import Catalogue from './pages/Catalogue'
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* Pages publiques */}
+          <Route path="/catalogue" element={<Catalogue />} />
           <Route path="/login" element={<Login />} />
+
+          {/* Pages protégées admin */}
           <Route
             path="/"
             element={
@@ -33,6 +38,7 @@ export default function App() {
             <Route path="calendrier" element={<Calendrier />} />
             <Route path="profil" element={<Profil />} />
           </Route>
+
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
