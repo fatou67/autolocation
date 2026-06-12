@@ -167,8 +167,8 @@ export default function Vehicules() {
         />
       </div>
 
-      <div className="bg-[#111e35] border border-[#1e2d45] rounded-lg overflow-hidden">
-        <table className="w-full text-sm">
+        <div className="bg-[#111e35] border border-[#1e2d45] rounded-lg overflow-x-auto">
+         <table className="w-full text-sm min-w-[600px]">
           <thead>
             <tr className="border-b border-[#1e2d45]">
               {['Photo', 'Véhicule', 'Immatriculation', 'Année', 'Tarif/jour', 'Statut', 'Actions'].map((h) => (
